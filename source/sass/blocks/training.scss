@@ -1,0 +1,238 @@
+.training__container {
+  display: grid;
+  gap: 25px;
+  padding: 20px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 57px;
+  }
+}
+
+.training__text-wrapper {
+  display: grid;
+  gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 870px;
+  }
+}
+
+.training__title-wrapper.title-duplicate-text {
+  padding: 17px 0 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 0 10px;
+  }
+}
+
+.training__title-wrapper.title-duplicate-text > span {
+  @media (min-width: $desktop-width) {
+    bottom: 5px;
+  }
+}
+
+.training__text-content {
+  color: #2d383f;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  p > br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.training__process-wrapper {
+  display: grid;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+.training__process-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+.training__process-list {
+  position: relative;
+  display: grid;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &::before {
+    position: absolute;
+    top: 11px;
+    left: 6px;
+    content: "";
+    min-width: 2px;
+    min-height: calc(100% - 22px);
+    background-color: #0266c1;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto auto;
+    gap: 104px 140px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto auto auto 1fr;
+    gap: 0;
+  }
+}
+
+.training__process-item {
+  position: relative;
+  padding-left: 64px;
+  padding-right: 25px;
+  min-height: 36px;
+  font-size: 12px;
+  line-height: 18px;
+  background-repeat: no-repeat;
+  background-position: left 29px top;
+  background-size: 25px 25px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    min-width: 14px;
+    min-height: 14px;
+    border-radius: 50%;
+    background-color: #0266c1;
+  }
+
+  &--map {
+    background-image: url("/__spritemap#sprite-map-view");
+  }
+
+  &--boots {
+    background-image: url("/__spritemap#sprite-boots-view");
+  }
+
+  &--pine-tree {
+    background-image: url("/__spritemap#sprite-pine-tree-view");
+  }
+
+  &--mountain {
+    background-image: url("/__spritemap#sprite-mountain-view");
+  }
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+    padding-right: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    background-position: left top;
+
+    &::before {
+      content: none;
+    }
+
+    &--mountain {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 102px;
+    padding: 8px 16px 22px 45px;
+    font-size: 16px;
+    line-height: 24px;
+    background-position: left 10px top 10px;
+
+    &::before {
+      left: 20px;
+      top: auto;
+      bottom: 0;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 13px;
+      left: 0;
+      content: "";
+      min-height: 2px;
+      min-width: 100%;
+      background-color: #0266c1;
+    }
+
+    &:nth-child(4n+1)::after {
+      left: 20px;
+    }
+
+    &--mountain {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    &--pine-tree {
+      &::before {
+        left: 0;
+      }
+    }
+
+    br {
+      display: inline;
+    }
+  }
+}

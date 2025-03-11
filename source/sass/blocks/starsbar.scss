@@ -1,0 +1,32 @@
+.starsbar {
+  width: 100%;
+  min-height: 16px;
+}
+
+.starsbar__stars {
+  position: relative;
+  width: 85px;
+  background-image: url("/__spritemap#sprite-star-view");
+}
+
+.starsbar__stars,
+.starsbar__quantity-stars {
+  height: 100%;
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: 17px 14px;
+}
+
+.starsbar__quantity-stars {
+  position: absolute;
+  width: 100%;
+  background-image: url("/__spritemap#sprite-star-white-view");
+
+  &--3-stars {
+    width: 51px;
+  }
+
+  &--4-stars {
+    width: 68px;
+  }
+}

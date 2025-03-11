@@ -1,0 +1,90 @@
+.socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $desktop-width) {
+    gap: 15px;
+  }
+}
+
+.socials-list__item,
+.socials-list__link {
+  position: relative;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.socials-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-list__link {
+  text-decoration: none;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out;
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 16px;
+    height: 16px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #2d383f;
+    transition: background-color 0.3s ease-out;
+  }
+
+  &--vkontakte::before {
+    mask-image: url("/__spritemap#sprite-vk-view");
+    mask-size: 16px 9px;
+  }
+
+  &--classmates::before {
+    mask-image: url("/__spritemap#sprite-odnoklassniki-view");
+    mask-size: 9px 16px;
+  }
+
+  &--reddit::before {
+    mask-image: url("/__spritemap#sprite-reddit-view");
+    mask-size: 14px 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:hover {
+      border-color: #2d383f;
+    }
+  }
+
+  &:focus-visible {
+    outline: 0;
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: 0;
+      background-color: #ffffff;
+      border-color: #ffffff;
+    }
+  }
+
+  &:active {
+    background-color: #0266c1;
+    border-color: #0266c1;
+
+    &::before {
+      background-color: #ffffff;
+    }
+  }
+}

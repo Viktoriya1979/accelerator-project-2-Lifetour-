@@ -1,0 +1,149 @@
+.advantage-card {
+  position: relative;
+  min-height: 239px;
+  padding: 19px 9px;
+  background-color: #ffffff;
+  border: 1px solid rgba(2, 101, 193, 0.1);
+  text-align: center;
+
+  &--hidden {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    min-height: 42px;
+    min-width: 42px;
+    border: 1px solid #0266c1;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+  }
+
+  &--safety::before {
+    background-image: url("/__spritemap#sprite-shield-view");
+  }
+
+  &--expertise::before {
+    background-image: url("/__spritemap#sprite-crown-view");
+  }
+
+  &--equipment::before {
+    background-image: url("/__spritemap#sprite-boot-view");
+  }
+
+  &--individual-routes::before {
+    background-image: url("/__spritemap#sprite-path-view");
+  }
+
+  &--respect-nature::before {
+    background-image: url("/__spritemap#sprite-leaf-view");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 340px;
+    padding: 29px 19px;
+
+    &::before {
+      top: 29px;
+      min-height: 48px;
+      min-width: 48px;
+    }
+
+    &--respect-nature {
+      grid-column: span 2;
+      justify-self: center;
+      width: 50%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    min-height: auto;
+    padding: 39px 19px;
+
+    &::before {
+      top: 39px;
+      min-height: 54px;
+      min-width: 54px;
+    }
+
+    &--hidden {
+      display: block;
+    }
+
+    &--respect-nature {
+      width: auto;
+    }
+  }
+}
+
+.advantage-card__text-content {
+  padding-top: 62px;
+  color: #2d383f;
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  p > br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 73px;
+
+    h3 {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    p > br {
+      display: inline;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 340px;
+    padding-top: 84px;
+
+    h3 {
+      font-size: 18px;
+      line-height: 18px;
+
+      br {
+        display: none;
+      }
+    }
+
+    p {
+      br {
+        display: none;
+      }
+    }
+  }
+}

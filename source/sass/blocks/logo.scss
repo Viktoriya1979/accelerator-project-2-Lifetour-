@@ -1,0 +1,41 @@
+.logo {
+  display: block;
+  width: 142px;
+  transition: opacity 0.3s ease-out;
+
+  @media (min-width: $tablet-width) {
+    &:hover {
+      opacity: $logo-opacity-hover;
+    }
+  }
+
+  &:focus-visible {
+    outline: $outline-focus-light;
+    outline-offset: $outline-offset-focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: $outline-focus-light;
+      outline-offset: $outline-offset-focus;
+    }
+  }
+
+  &:active {
+    opacity: $logo-opacity-active;
+  }
+
+  img {
+    display: block;
+  }
+
+  &--dark:focus-visible {
+    outline: $outline-focus-dark;
+  }
+
+  @supports not selector(:focus-visible) {
+    &--dark:focus {
+      outline: $outline-focus-dark;
+    }
+  }
+}

@@ -1,4 +1,46 @@
 // Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+@import "vendor/swiper";
+
+// Common
+@import "common/variables";
+@import "common/global";
+
+// Fonts
+@import "fonts";
+
+// Blocks
+// Компоненты
+@import "blocks/page";
+@import "blocks/container";
+@import "blocks/button";
+@import "blocks/title-duplicate-text";
+@import "blocks/swiper-button";
+@import "blocks/starsbar";
+
+// Header
+@import "blocks/logo";
+@import "blocks/main-header";
+@import "blocks/main-navigation";
+
+// Main
+@import "blocks/hero";
+@import "blocks/hero-card";
+@import "blocks/tours";
+@import "blocks/tour-card";
+@import "blocks/training";
+@import "blocks/instructors";
+@import "blocks/instructor-card";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/review-card";
+@import "blocks/advantages";
+@import "blocks/advantage-card";
+@import "blocks/photo-gallery";
+@import "blocks/photo-gallery-card";
+@import "blocks/feedback";
+@import "blocks/form-field";
+
+// Footer
+@import "blocks/footer-contacts";
+@import "blocks/socials-list";

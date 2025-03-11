@@ -1,0 +1,106 @@
+.instructor-card {
+  display: grid;
+  align-content: start;
+  gap: 15px;
+  width: auto;
+  padding: 14px;
+  background-color: #ffffff;
+  border: 1px solid rgba(2, 101, 193, 0.1);
+
+  @media (min-width: $desktop-width) {
+    gap: 17px;
+  }
+}
+
+.instructor-card__image-wrapper {
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 183px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 255px;
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+}
+
+.instructor-card__description-wrapper {
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 183px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 255px;
+  }
+}
+
+.instructor-card__text-content {
+  display: grid;
+  gap: 15px;
+  color: #2d383f;
+}
+
+.instructor-card__persona-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px;
+}
+
+.instructor-card__socials-wrapper.socials-list {
+  gap: 5px;
+}
+
+.instructor-card__persona-wrapper .socials-list__item,
+.instructor-card__persona-wrapper .socials-list__link {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.instructor-card__text-content .instructor-card__persona-wrapper > h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.instructor-card__text-content > p {
+  margin: 0;
+  padding-right: 18px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+
+  time {
+    display: inline-block;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 6px;
+  }
+}

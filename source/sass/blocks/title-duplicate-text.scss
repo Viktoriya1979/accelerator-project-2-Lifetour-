@@ -1,0 +1,57 @@
+.title-duplicate-text {
+  position: relative;
+  z-index: 1;
+  min-height: 55px;
+  padding: 19px 0 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
+.title-duplicate-text > h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
+    transform: translateY(3px);
+  }
+}
+
+.title-duplicate-text > span {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 3px;
+  display: block;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 800;
+  opacity: 0.03;
+
+  @media (min-width: $tablet-width) {
+    top: auto;
+    bottom: 10px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -5px;
+    font-size: 55px;
+    line-height: 55px;
+  }
+}

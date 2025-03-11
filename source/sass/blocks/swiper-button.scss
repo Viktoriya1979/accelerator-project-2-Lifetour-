@@ -1,0 +1,83 @@
+.swiper-button.swiper-button-prev,
+.swiper-button.swiper-button-next {
+  position: static;
+  display: inline-block;
+  margin-top: 0;
+  padding: 4px;
+  width: 37px;
+  height: 35px;
+  border: 1px solid transparent;
+  background-color: #0266c1;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out;
+
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    min-width: 15px;
+    min-height: 15px;
+    background-color: #ffffff;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 14px 9px;
+    mask-image: url("/__spritemap#sprite-arrow-right-view");
+    transition: background-color 0.3s ease-out;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:hover {
+      border-color: $color-hover-focus-btn;
+      background-color: #ffffff;
+
+      &::after {
+        background-color: $color-hover-focus-btn;
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: 0;
+    background-color: #ffffff;
+    border-color: #ffffff;
+
+    &::after {
+      background-color: $color-hover-focus-btn;
+    }
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: 0;
+      background-color: #ffffff;
+      border-color: #ffffff;
+
+      &::after {
+        background-color: $color-hover-focus-btn;
+      }
+    }
+  }
+
+  &:active {
+    border-color: $bg-active-btn;
+    background-color: $bg-active-btn;
+
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.swiper-button.swiper-button-prev {
+  &::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+.swiper-button.swiper-button-disabled {
+  border-color: $bg-disabled-btn;
+  background-color: $bg-disabled-btn;
+  opacity: 1;
+}
